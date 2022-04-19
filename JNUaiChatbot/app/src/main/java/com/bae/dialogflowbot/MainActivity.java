@@ -58,14 +58,13 @@ public class MainActivity extends AppCompatActivity implements BotReply {
   private String TAG = "mainactivity";
 
   //화면전환
-  //지도 버튼 클릭시 화면전환 (채희)
+  //지도 버튼 클릭시 화면전환
   private Button button5;
 
-  //캘린더 버튼 클릭시 화면전환 (수영)
+  //캘린더 버튼 클릭시 화면전환
   private Button button2;
 
-
-  //메뉴 버튼 클릭시 화면전환 (정경)
+  //메뉴 버튼 클릭시 화면전환
   private Button button6;
   private Button say;
 
@@ -77,9 +76,8 @@ public class MainActivity extends AppCompatActivity implements BotReply {
     editMessage = findViewById(R.id.editMessage);
     btnSend = findViewById(R.id.btnSend);
 
-
     //화면전환
-    //캘린더 버튼 클릭시 화면전환 (수영)
+    //캘린더 버튼 클릭시 화면전환
     button2 = findViewById(R.id.button2);
     button2.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -89,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements BotReply {
       }
     });
 
-    //지도 버튼 클릭시 화면전환(채희)
+    //지도 버튼 클릭시 화면전환
     button5 = findViewById(R.id.button5);
     button5.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -99,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements BotReply {
       }
     });
 
-    //메뉴 버튼 클릭 화면전환 (정경)
+    //메뉴 버튼 클릭 화면전환
     button6 = findViewById(R.id.button6);
     button6.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -288,4 +286,5 @@ public class MainActivity extends AppCompatActivity implements BotReply {
        Toast.makeText(this, "failed to connect!", Toast.LENGTH_SHORT).show();
      }
   }
+
 }
