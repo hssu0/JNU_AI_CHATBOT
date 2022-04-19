@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="5">
+        android:weightSum="6">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -90,6 +90,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+        <Button
+            android:id="@+id/portal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="포털사이트"
+            android:layout_margin="8dp"
+            android:backgroundTint="#FFE2FA"
+            android:textColor="#7A7A7A"
+            android:textSize="30sp"
+            android:drawableLeft="@drawable/website"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button11"
+            app:layout_constraintVertical_bias="1.0" />
     </LinearLayout>
 
 
