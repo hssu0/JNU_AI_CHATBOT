@@ -3,6 +3,7 @@ package com.bae.dialogflowbot.models;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +26,9 @@ public class menu_activity extends AppCompatActivity {
     //미세먼지 버튼 클릭시 화면전환
     private Button button12;
 
+    //포털사이트 버튼 클릭시 url로 이동
+    private Button portal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,36 +45,44 @@ public class menu_activity extends AppCompatActivity {
             }
         });
 
-         //그림판 버튼 클릭시 화면전환
-         button10 = findViewById(R.id.button10);
-         button10.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 Intent intent = new Intent(menu_activity.this, painter_activity.class);
-                 startActivity(intent); //액티비티 이동
-             }
-         });
+        //그림판 버튼 클릭시 화면전환
+        button10 = findViewById(R.id.button10);
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(menu_activity.this, painter_activity.class);
+                startActivity(intent); //액티비티 이동
+            }
+        });
 
-         //미니게임 버튼 클릭시 화면전환
-          button11 = findViewById(R.id.button11);
-          button11.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View v) {
-                   Intent intent = new Intent(menu_activity.this, game_activity.class);
-                   startActivity(intent); //액티비티 이동
-               }
-          });
+        //미니게임 버튼 클릭시 화면전환
+        button11 = findViewById(R.id.button11);
+        button11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(menu_activity.this, game_activity.class);
+                startActivity(intent); //액티비티 이동
+            }
+        });
 
-         //미세먼지 버튼 클릭시 화면전환
-          button12 = findViewById(R.id.button12);
-          button12.setOnClickListener(new View.OnClickListener() {
-              @Override
-              public void onClick(View v) {
-                  Intent intent = new Intent(menu_activity.this, weather_activity.class);
-                  startActivity(intent); //액티비티 이동
-              }
-          });
+        //미세먼지 버튼 클릭시 화면전환
+        button12 = findViewById(R.id.button12);
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(menu_activity.this, weather_activity.class);
+                startActivity(intent); //액티비티 이동
+            }
+        });
 
-
+        //포털사이트 버튼 클릭시 화면전환
+        portal = findViewById(R.id.portal);
+        portal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(menu_activity.this, portal_activity.class);
+                startActivity(intent); //액티비티 이동
+            }
+        });
     }
 }
