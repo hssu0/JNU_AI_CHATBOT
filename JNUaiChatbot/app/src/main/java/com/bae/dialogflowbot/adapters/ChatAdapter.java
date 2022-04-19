@@ -52,7 +52,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
      if(isReceived){
        holder.messageReceive.setVisibility(View.VISIBLE);
        holder.messageSend.setVisibility(View.GONE);
-       holder.imageReceive.setVisibility(View.GONE);
        holder.imageReceiveScroll.setVisibility(View.GONE);
 
        if(message.contains("공과대학 복사기")){
@@ -60,7 +59,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
          Drawable copy_engineering = activity.getDrawable(R.drawable.copy_engineering);
          holder.imageReceive.setImageDrawable(copy_engineering);
        }
-       else if(message.contains("수강신청 방법")){
+       else if(message.contains("수강신청")){
          holder.imageReceive.setVisibility(View.VISIBLE);
          Drawable register = activity.getDrawable(R.drawable.register);
          holder.imageReceive.setImageDrawable(register);
@@ -185,6 +184,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
        }
        holder.messageReceive.setText(message);
        holder.messageReceive.setClickable(true);
+       //holder.messageReceive.callOnClick();
 
        //messageReceive를 클릭하면 speak
        holder.messageReceive.setOnClickListener(new View.OnClickListener() {
@@ -222,6 +222,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
          }
        });
 
+
+
      }else {
        holder.messageSend.setVisibility(View.VISIBLE);
        holder.messageReceive.setVisibility(View.GONE);
@@ -230,6 +232,10 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
        holder.messageSend.setText(message);
      }
+
+
+
+
   }
 
   @Override public int getItemCount() {
@@ -272,5 +278,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
     }
 
   }
-  
+
+
 }
